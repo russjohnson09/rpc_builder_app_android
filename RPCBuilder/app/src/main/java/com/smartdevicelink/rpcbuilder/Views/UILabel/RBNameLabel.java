@@ -6,13 +6,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatTextView;
+
 import com.smartdevicelink.rpcbuilder.DataModels.RBParam;
 
 /**
  * Created by austinkirk on 11/16/16.
  */
 
-public class RBNameLabel extends android.support.v7.widget.AppCompatTextView {
+public class RBNameLabel extends AppCompatTextView {
     private Boolean enabled = true;
     private String rbParamName = "";
 

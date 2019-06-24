@@ -1,32 +1,44 @@
 apply plugin: 'com.android.application'
 
+
 android {
-    compileSdkVersion 25
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.smartdevicelink.rpcbuilder"
-        minSdkVersion 14 //for functionality
-        targetSdkVersion 25
+        applicationId "com.example.myapplication2"
+        minSdkVersion 15
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.smartdevicelink:sdl_android:4.+'
-    compile 'com.android.support:appcompat-v7:25.4.0'
-    compile 'com.android.support:support-v4:25.4.0'
-    compile 'com.android.support:recyclerview-v7:25.4.0'
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+
+    //https://developer.android.com/jetpack/androidx/migrate
+    implementation 'com.smartdevicelink:sdl_android:4.+'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+//    implementation 'com.android.support:support-v4:25.4.0'
+
+//    implementation 'com.android.support:recyclerview-v7:25.4.0'
+//    implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+//    implementation 'com.android.support:appcompat-v7:25.4.0'
+
+//    implementation 'com.android.support:support-v4:25.4.0'
+
+//    implementation 'com.android.support:recyclerview-v7:25.4.0'
+
+
+//    testCompile 'junit:junit:4.12'
 }

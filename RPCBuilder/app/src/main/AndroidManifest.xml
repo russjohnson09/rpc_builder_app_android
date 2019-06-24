@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.smartdevicelink.rpcbuilder">
 
     <application
+        tools:replace="android:value"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +25,11 @@
         <service
             android:name=".SmartDeviceLink.SdlService"
             android:enabled="true"/>
+
     </application>
+
+    <!--https://stackoverflow.com/questions/43280871/android-getting-manifest-merger-failed-error-after-updating-to-a-new-version-->
+    <!--https://stackoverflow.com/questions/25981156/tools-replace-not-replacing-in-android-manifest-->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.BLUETOOTH"/>

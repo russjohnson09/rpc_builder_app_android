@@ -4,6 +4,8 @@ package com.smartdevicelink.rpcbuilder.Views.UIStructButton;
 import android.content.Context;
 import android.view.View;
 
+import androidx.appcompat.widget.AppCompatButton;
+
 import com.smartdevicelink.rpcbuilder.Activities.BuildActivity;
 import com.smartdevicelink.rpcbuilder.DataModels.RBStruct;
 import com.smartdevicelink.rpcbuilder.Fragments.ListStructParamsFragment;
@@ -15,7 +17,7 @@ import com.smartdevicelink.rpcbuilder.Views.RBStructParamView;
  * Created by austinkirk on 11/15/16.
  */
 
-public class RBStructButton extends android.support.v7.widget.AppCompatButton{
+public class RBStructButton extends AppCompatButton {
 
     private Context mContext;
     private boolean isArray;

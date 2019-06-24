@@ -5,6 +5,8 @@ import android.text.InputFilter;
 import android.text.InputType;
 import android.text.Spanned;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 import com.smartdevicelink.rpcbuilder.DataModels.RBBaseObject;
 import com.smartdevicelink.rpcbuilder.DataModels.RBParam;
 
@@ -12,7 +14,8 @@ import com.smartdevicelink.rpcbuilder.DataModels.RBParam;
  * Created by austinkirk on 11/14/16.
  */
 
-public class RBParamTextField extends android.support.v7.widget.AppCompatEditText{
+//android.support.v7.widget.AppCompatEditText
+public class RBParamTextField extends AppCompatEditText {
     private String mType;
     private Boolean mRequiresArray = false;
 

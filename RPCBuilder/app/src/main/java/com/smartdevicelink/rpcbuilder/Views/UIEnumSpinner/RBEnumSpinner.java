@@ -3,6 +3,8 @@ package com.smartdevicelink.rpcbuilder.Views.UIEnumSpinner;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 
+import androidx.appcompat.widget.AppCompatSpinner;
+
 import com.smartdevicelink.rpcbuilder.DataModels.RBElement;
 import com.smartdevicelink.rpcbuilder.DataModels.RBEnum;
 
@@ -12,7 +14,7 @@ import java.util.ArrayList;
  * Created by austinkirk on 11/16/16.
  */
 
-public class RBEnumSpinner extends android.support.v7.widget.AppCompatSpinner {
+public class RBEnumSpinner extends AppCompatSpinner {
     private boolean mRequiresArray = false;
     private final String[] enumsRequiringArray = {"GlobalProperty"};
 
